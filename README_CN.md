@@ -1,23 +1,23 @@
-English | [简体中文](README_CN.md)
+[English](README.md) | 简体中文
 
 # FragmentVisibility
 
-Unified fragment visibility library for Android.
+适用于 Android 的统一 Fragment 可见性库。
 
 [![Download](https://api.bintray.com/packages/taylorzhang/maven/fragment-visibility/images/download.svg?style=flat)](https://bintray.com/taylorzhang/maven/fragment-visibility/)
 [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
 [![License](https://img.shields.io/badge/License-Apache--2.0-brightgreen.svg?style=flat)](LICENSE)
 
-Support Fragment usage scenarios:
+支持的 Fragment 使用场景：
 
-- Declare the Fragment in the xml file, or dynamically load the Fragment through add or replace in the code.
-- Use Fragment in FragmentContainerView/FrameLayout, Use show and hide to control the display and hide Fragment.
-- Use Fragment in FragmentContainerView/FrameLayout, Use show and hide to control the display and hide Fragment, and use setMaxLifecycle to control the life cycle of fragment.
-- Use Fragment in ViewPager, Behavior is BEHAVIOR_SET_USER_VISIBLE_HINT or BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT.
-- Use Fragment in ViewPager2.
-- Multi-level nested Fragment.
+- 在 xml 文件中声明 Fragment，或者在代码中通过 add 或 replace 动态载入 Fragment。
+- 在 FragmentContainerView/FrameLayout 中使用Fragment，使用 show 和 hide 控制显示和隐藏 Fragment。
+- 在 FragmentContainerView/FrameLayout 中使用Fragment，使用 show 和 hide 控制显示和隐藏 Fragment，同时使用 setMaxLifecycle 控制Fragment周期。
+- 在 ViewPager 中使用 Fragment，Behavior 为 BEHAVIOR_SET_USER_VISIBLE_HINT 或 BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT。
+- 在 ViewPager2 中使用 Fragment。
+- 多层嵌套Fragment。
 
-## Download
+## 下载
 
 ```groovy
 dependencies {
@@ -25,9 +25,9 @@ dependencies {
 }
 ```
 
-## Usage
+## 使用
 
-### Visibility Callback
+### 可见性回调
 
 ```kotlin
 class YourFragment : VisibilityFragment() {
@@ -35,31 +35,31 @@ class YourFragment : VisibilityFragment() {
     override fun onVisible() {
         super.onVisible()
 
-        // Called when the fragment is visible.
+        // Fragment可见时调用。
     }
 
     override fun onInvisible() {
         super.onInvisible()
 
-        // Called when the Fragment is not visible.
+        // Fragment不可见时调用。
     }
 
     override fun onVisibleFirst() {
         super.onVisibleFirst()
-
-        // Called when the fragment is visible for the first time.
-        // You can load data here for lazy loading.
+        
+        // Fragment第一次可见时调用。
+        // 你可以在此处加载数据以实现懒加载。
     }
 
     override fun onVisibleExceptFirst() {
         super.onVisibleExceptFirst()
 
-        // Called when the fragment is visible except first time.
+        // Fragment可见时（第一次除外）调用。
     }
 }
 ```
 
-### Visibility State
+### 可见性状态
 
 ```kotlin
 class YourFragment : VisibilityFragment() {
