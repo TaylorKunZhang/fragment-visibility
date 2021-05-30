@@ -4,7 +4,7 @@
 
 适用于 Android 的统一 Fragment 可见性库。
 
-[![Download](https://api.bintray.com/packages/taylorzhang/maven/fragment-visibility/images/download.svg?style=flat)](https://bintray.com/taylorzhang/maven/fragment-visibility/)
+[![Maven Central](https://img.shields.io/maven-central/v/cc.taylorzhang/fragment-visibility.svg?style=flat)](https://search.maven.org/artifact/cc.taylorzhang/fragment-visibility)
 [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
 [![License](https://img.shields.io/badge/License-Apache--2.0-brightgreen.svg?style=flat)](LICENSE)
 
@@ -20,6 +20,10 @@
 ## 下载
 
 ```groovy
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     implementation 'cc.taylorzhang:fragment-visibility:1.0.0'
 }
